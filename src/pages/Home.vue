@@ -9,15 +9,15 @@ import Footer from "@/components/Footer.vue";
 </script>
 
 <template>
-  <div class="page">
-    <Navbar />
-    <main>
-      <Hero />
-      <About />
-      <Activities />
-      <Ministries />
-      <ContactSection />
-    </main>
-    <Footer />
-  </div>
+    <div class="page">
+        <Navbar />
+        <main>
+            <Hero />
+            <About />
+            <Activities />
+            <Ministries />
+            <ContactSection />
+        </main>
+        <Footer />
+    </div>
 </template>

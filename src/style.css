@@ -31,19 +31,20 @@ a {
 .site-header {
   position: relative;
   z-index: 10;
-  min-height: 82px;
-  padding: 16px 5.5%;
+  min-height: 78px;
+  padding: 14px 5.5%;
   display: flex;
   align-items: center;
   gap: 30px;
-  background: #087f92;
+  background: rgba(8, 127, 146, 0.96);
   color: #fff;
+  box-shadow: 0 8px 24px rgba(10, 57, 68, 0.1);
 }
 .brand {
   display: flex;
   align-items: center;
   gap: 11px;
-  min-width: 265px;
+  min-width: 250px;
 }
 .brand img {
   width: 47px;
@@ -72,7 +73,39 @@ a {
   margin-left: auto;
   font-size: 14px;
 }
-.desktop-nav a,
+.desktop-nav a {
+  position: relative;
+  padding: 8px 0;
+  opacity: 0.78;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+}
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #ffc76f;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease;
+}
+.desktop-nav a:hover,
+.desktop-nav a:focus-visible {
+  opacity: 1;
+  color: #ffc76f;
+}
+.desktop-nav a:hover::after,
+.desktop-nav a:focus-visible::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.desktop-nav .home-link {
+  display: none;
+}
 .footer-links a {
   opacity: 0.86;
   transition:
@@ -89,13 +122,18 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 16px;
-  padding: 13px 17px;
-  border: 1px solid rgba(255, 255, 255, 0.55);
+  padding: 12px 17px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
   font-size: 12px;
+  border-radius: 999px;
   white-space: nowrap;
   transition:
     background 0.2s,
     color 0.2s;
+}
+.header-action {
+  margin-left: 8px;
+  background: rgba(255, 255, 255, 0.08);
 }
 .header-action:hover,
 .primary-button:hover {
@@ -112,24 +150,174 @@ a {
 .mobile-nav {
   display: none;
 }
+.floating-home {
+  position: fixed;
+  z-index: 20;
+  top: 96px;
+  right: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 10px 13px;
+  border: 1px solid rgba(8, 127, 146, 0.22);
+  border-radius: 999px;
+  background: rgba(251, 249, 245, 0.92);
+  box-shadow: 0 8px 20px rgba(14, 56, 69, 0.14);
+  color: #087f92;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: grab;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.2s;
+}
+.floating-home.is-dragging {
+  cursor: grabbing;
+  transform: scale(1.04);
+  transition:
+    background 0.2s,
+    color 0.2s,
+    transform 0.1s;
+}
+.floating-home span {
+  font-size: 16px;
+  line-height: 0.8;
+}
+.floating-home:hover,
+.floating-home:focus-visible {
+  background: #ffc76f;
+  color: #114655;
+  transform: translateY(-2px);
+}
+.founder-hero {
+  display: grid;
+  grid-template-columns: 44% 56%;
+  min-height: 610px;
+  background: #f4b2b3;
+}
+.founder-hero-copy {
+  align-self: center;
+  padding: 80px 12%;
+}
+.founder-hero-copy .eyebrow {
+  color: #087f92;
+}
+.founder-hero h1 {
+  margin-bottom: 24px;
+  color: #114655;
+  font-size: clamp(58px, 7vw, 104px);
+  line-height: 0.92;
+}
+.founder-hero h1 em,
+.founder-story h2 em {
+  color: #087f92;
+}
+.founder-lede {
+  max-width: 360px;
+  color: #114655;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.founder-hero-image {
+  min-height: 610px;
+}
+.founder-hero-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.founder-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12%;
+  padding: 110px 10%;
+  background: #fbf9f5;
+}
+.founder-story h2 {
+  margin-bottom: 0;
+  color: #173b48;
+  font-size: clamp(38px, 5vw, 66px);
+  line-height: 1;
+}
+.founder-story-copy {
+  align-self: end;
+  max-width: 490px;
+  color: #49636a;
+  font-size: 17px;
+  line-height: 1.75;
+}
+.founder-story-copy p:last-child {
+  margin-bottom: 0;
+}
+.founder-quote {
+  padding: 100px 10%;
+  background: #087f92;
+  color: #fff;
+  text-align: center;
+}
+.founder-quote .eyebrow {
+  color: #ffc76f;
+}
+.founder-quote blockquote {
+  max-width: 800px;
+  margin: 0 auto 34px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.2;
+}
+.founder-quote .underlined-link {
+  color: #fff;
+}
 .hero {
   position: relative;
-  min-height: 670px;
-  grid-template-columns: 43% 57%;
-  background-image: url("/images/hero.jpg");
+  min-height: clamp(560px, 64vw, 760px);
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  background-image: url("/images/cbco_org.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: center 42%;
+  isolation: isolate;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(14, 56, 69, 0.76) 0%,
+      rgba(14, 56, 69, 0.38) 44%,
+      rgba(14, 56, 69, 0.08) 78%
+    ),
+    linear-gradient(0deg, rgba(14, 56, 69, 0.22), transparent 42%);
 }
 .hero-copy {
   position: relative;
   z-index: 2;
   align-self: center;
+  width: min(560px, 52%);
   padding: 70px 8vw 80px;
 }
 .eyebrow {
   margin: 0 0 20px;
   color: #e98b69;
   font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.eyebrow1 {
+  margin-top: 300px;
+  color: #f7ad00;
+  font-size: 20px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
@@ -167,6 +355,7 @@ em {
 .hero-actions {
   display: flex;
   align-items: center;
+  color: #fff;
   gap: 24px;
   margin-top: 34px;
 }
@@ -309,10 +498,11 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transform: scale(1.04);
+  transition: transform 0.5s ease;
 }
 .program:hover .program-image img {
-  transform: scale(1.04);
+  transform: scale(1);
 }
 .program-image span {
   position: absolute;
@@ -378,10 +568,11 @@ h2 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.5s;
+  transform: scale(1.04);
+  transition: transform 0.5s ease;
 }
 .story-grid figure:hover img {
-  transform: scale(1.05);
+  transform: scale(1);
 }
 .story-grid figure::after {
   content: "";
@@ -478,12 +669,103 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 32px;
   padding-bottom: 42px;
 }
 .footer-links {
   display: flex;
+  align-items: center;
   gap: 30px;
   font-size: 12px;
+}
+.footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.footer-contact-label {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.social-link {
+  display: grid;
+  place-items: center;
+  width: 29px;
+  height: 29px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50%;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    color 0.2s;
+}
+.social-link svg,
+.floating-telegram svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+.social-link:first-child svg {
+  fill: currentColor;
+  stroke: none;
+}
+.social-link .icon-fill {
+  fill: currentColor;
+  stroke: none;
+}
+.social-link:hover,
+.social-link:focus-visible {
+  border-color: #ffc76f;
+  background: #ffc76f;
+  color: #114655;
+}
+.social-link[aria-label="Telephone contact"] {
+  border-radius: 999px;
+}
+.floating-telegram {
+  position: fixed;
+  z-index: 19;
+  right: 24px;
+  bottom: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px 12px 13px;
+  border: 1px solid #229ed9;
+  border-radius: 999px;
+  background: #229ed9;
+  box-shadow: 0 10px 24px rgba(14, 56, 69, 0.22);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+.floating-telegram svg {
+  width: 17px;
+  height: 17px;
+}
+.floating-telegram:hover,
+.floating-telegram:focus-visible {
+  background: #168ac1;
+  transform: translateY(-3px);
 }
 .footer-bottom {
   display: flex;
@@ -541,6 +823,12 @@ footer {
   width: 100%;
   height: 240px;
   object-fit: cover;
+  transform: scale(1.04);
+  transition: transform 0.5s ease;
+}
+
+.focus-card:hover img {
+  transform: scale(1);
 }
 
 .focus-card-body {
@@ -606,18 +894,22 @@ footer {
     display: none;
   }
   .menu-toggle {
-    display: block;
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    padding: 9px 11px;
-    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    border-radius: 999px;
+    padding: 9px 13px;
+    background: rgba(255, 255, 255, 0.08);
     color: #fff;
     font:
       11px "DM Sans",
       sans-serif;
+    cursor: pointer;
   }
   .menu-toggle span {
-    margin-left: 7px;
     font-size: 15px;
+    line-height: 1;
   }
   .mobile-nav {
     position: absolute;
@@ -628,8 +920,19 @@ footer {
     flex-direction: column;
     gap: 0;
     padding: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 16px;
     background: #087f92;
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.16);
+  }
+  .floating-home {
+    top: auto;
+    right: 5%;
+    bottom: 18px;
+  }
+  .floating-telegram {
+    right: 5%;
+    bottom: 72px;
   }
   .mobile-nav a {
     padding: 13px;
@@ -637,11 +940,33 @@ footer {
     font-size: 13px;
   }
   .hero {
-    min-height: 690px;
+    min-height: 610px;
+    background-position: 62% center;
+  }
+  .founder-hero {
     display: block;
+    min-height: 0;
+  }
+  .founder-hero-copy {
+    padding: 64px 8% 54px;
+  }
+  .founder-hero h1 {
+    font-size: clamp(54px, 17vw, 82px);
+  }
+  .founder-hero-image {
+    min-height: 330px;
+  }
+  .founder-story {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 72px 8%;
+  }
+  .founder-quote {
+    padding: 72px 8%;
   }
   .hero-copy {
-    padding: 56px 5% 36px;
+    width: 100%;
+    padding: 56px 8% 36px;
   }
   .hero-visual {
     min-height: 390px;
@@ -674,7 +999,7 @@ footer {
   }
   .program-grid,
   .story-grid,
-  .ministry-grid {
+  .focus-grid {
     grid-template-columns: 1fr;
   }
   .story-grid figure,
