@@ -20,4 +20,11 @@ export const activities = [
     number: "03",
     href: "#contact",
   },
+  {
+    title: "Mission Teams",
+    text: "Bringing together people from around the world to serve alongside local communities.",
+    image: "/images/mission.jpg",
+    number: "04",
+    href: "#contact",
+  },
 ];

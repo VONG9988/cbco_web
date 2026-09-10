@@ -25,11 +25,23 @@ a {
 .page {
   max-width: 1440px;
   margin: 0 auto;
+  padding-top: 78px;
   overflow: hidden;
   background: #fbf9f5;
 }
+.btn {
+  font-size: 20px;
+  color: #07115b;
+}
+.btn:hover {
+  color: #087492;
+}
 .site-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  width: min(100%, 1440px);
+  transform: translateX(-50%);
   z-index: 10;
   min-height: 78px;
   padding: 14px 5.5%;
@@ -777,6 +789,7 @@ footer {
 }
 
 .focus-section {
+  scroll-margin-top: 78px;
   padding: 0 8% 90px;
   background: #e7e1d8;
 }
@@ -868,6 +881,7 @@ footer {
 @media (max-width: 760px) {
   .page {
     max-width: 100%;
+    padding-top: 68px;
   }
   .site-header {
     min-height: 68px;

@@ -63,6 +63,7 @@ const links = [
     { label: "Home", href: "/#home" },
     { label: "About", href: "/#about" },
     { label: "Our work", href: "/#programs" },
+    { label: "Our Serve", href: "/#serve" },
     { label: "Our Founder", href: "/founder" },
     { label: "Stories", href: "/founder#founder-story" },
     { label: "Contact", href: "/#contact" },

@@ -83,7 +83,7 @@ export const focusGroups = [
       },
       {
         image: "/images/doen.jpg",
-        name: "DOEN Sem",
+        name: "DOEURN Sem",
         text: "I am third generation university student. My major is Public Administration and I graduated in 2026.",
       },
       {
@@ -108,12 +108,12 @@ export const focusGroups = [
       },
       {
         image: "/images/lea.jpg",
-        name: "LEA LOEUM",
+        name: "LEA LOEURM",
         text: "I am fourth generation university student. My major is Public Administration and I'll graduated in 2027.",
       },
       {
         image: "/images/leak.jpg",
-        name: "LEAK LE",
+        name: "SREYLEAK LE",
         text: "I am fourth generation university student. My major is Public Administration and I'll graduated in 2027.",
       },
       {
@@ -128,12 +128,12 @@ export const focusGroups = [
       },
       {
         image: "/images/poen.jpg",
-        name: "POEN THAN",
+        name: "POEURN THORN",
         text: "I am fifth generation university student. My major is Information Technology and I'll graduated in 2028.",
       },
       {
         image: "/images/lap.jpg",
-        name: "LAP LEN",
+        name: "KOLAP LEN",
         text: "I am sixth generation university student. My major is Public Administration and I'll graduated in 2029.",
       },
     ],
