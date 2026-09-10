@@ -153,10 +153,11 @@ a {
   border-color: #ffc76f;
   color: #114655;
 }
-.header-action span,
-.primary-button span,
-.underlined-link span {
-  font-size: 17px;
+.header-action .ui-icon,
+.primary-button .ui-icon,
+.underlined-link .ui-icon {
+  width: 17px;
+  height: 17px;
 }
 .menu-toggle,
 .mobile-nav {
@@ -196,9 +197,9 @@ a {
     color 0.2s,
     transform 0.1s;
 }
-.floating-home span {
-  font-size: 16px;
-  line-height: 0.8;
+.floating-home .ui-icon {
+  width: 16px;
+  height: 16px;
 }
 .floating-home:hover,
 .floating-home:focus-visible {
@@ -375,9 +376,10 @@ em {
   color: #ffc76f;
   font-size: 12px;
 }
-.quiet-link span {
+.quiet-link .ui-icon {
   margin-left: 8px;
-  font-size: 16px;
+  width: 16px;
+  height: 16px;
 }
 .hero-visual {
   position: relative;
@@ -550,9 +552,10 @@ h2 {
   font-size: 11px;
   font-weight: 700;
 }
-.program-body a span {
+.program-body a .ui-icon {
   margin-left: 10px;
-  font-size: 16px;
+  width: 16px;
+  height: 16px;
 }
 .stories {
   background: #fbf9f5;
@@ -921,9 +924,9 @@ footer {
       sans-serif;
     cursor: pointer;
   }
-  .menu-toggle span {
-    font-size: 15px;
-    line-height: 1;
+  .menu-toggle .ui-icon {
+    width: 15px;
+    height: 15px;
   }
   .mobile-nav {
     position: absolute;

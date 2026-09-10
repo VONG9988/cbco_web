@@ -1,3 +1,7 @@
+<script setup>
+import Icon from "@/components/Icon.vue";
+</script>
+
 <template>
     <section class="statement section" id="about">
         <p class="eyebrow">Who we are</p>
@@ -9,7 +13,9 @@
                     community. We listen first, then build thoughtful programs around what
                     children and families truly need.
                 </p>
-                <a class="underlined-link" href="#programs">Get to know CBCO <span>↗</span></a>
+                <a class="underlined-link" href="#programs">Get to know CBCO
+                    <Icon name="arrow-up-right" />
+                </a>
             </div>
         </div>
     </section>

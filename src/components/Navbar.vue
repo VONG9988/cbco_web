@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from "vue";
+import Icon from "@/components/Icon.vue";
 
 const menuOpen = ref(false);
 const floatingHomeStyle = ref({});
@@ -82,7 +83,8 @@ const links = [
 
         <button class="menu-toggle" type="button" aria-label="Toggle navigation" :aria-expanded="menuOpen"
             @click="menuOpen = !menuOpen">
-            Menu <span>{{ menuOpen ? "×" : "↗" }}</span>
+            Menu
+            <Icon :name="menuOpen ? 'close' : 'menu'" />
         </button>
 
         <nav class="desktop-nav" aria-label="Main navigation">
@@ -92,7 +94,9 @@ const links = [
                 }}</a>
         </nav>
 
-        <a class="header-action" href="/#contact">Make an impact <span>↗</span></a>
+        <a class="header-action" href="/#contact">Make an impact
+            <Icon name="arrow-up-right" />
+        </a>
 
         <nav v-if="menuOpen" class="mobile-nav" aria-label="Mobile navigation">
             <a v-for="link in links" :key="link.href" :href="link.href" @click="menuOpen = false">{{ link.label }}</a>
@@ -101,7 +105,7 @@ const links = [
         <a class="floating-home" :class="{ 'is-dragging': isDraggingHome }" :style="floatingHomeStyle" href="/#home"
             aria-label="Back to home hero" @pointerdown="startHomeDrag" @pointermove="moveHome" @pointerup="endHomeDrag"
             @pointercancel="endHomeDrag" @click="handleHomeClick">
-            <span aria-hidden="true">↑</span>
+            <Icon name="arrow-up" />
             Home
         </a>
     </header>

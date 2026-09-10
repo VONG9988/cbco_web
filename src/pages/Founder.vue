@@ -1,4 +1,5 @@
 <script setup>
+import Icon from "@/components/Icon.vue";
 import Navbar from "@/components/Navbar.vue";
 import Footer from "@/components/Footer.vue";
 </script>
@@ -43,7 +44,9 @@ import Footer from "@/components/Footer.vue";
                 <blockquote>
                     Visal & Ally<br /><em>Founder of CBCO</em>
                 </blockquote>
-                <a class="underlined-link" href="/">Return to CBCO <span>↗</span></a>
+                <a class="underlined-link" href="/">Return to CBCO
+                    <Icon name="arrow-up-right" />
+                </a>
             </section>
         </main>
         <Footer />

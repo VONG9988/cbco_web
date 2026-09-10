@@ -58,7 +58,6 @@
         <a class="floating-telegram" href="https://t.me/VIT_VONG" onclick="openTelegram(event)"
             aria-label="Open CBCO Telegram">
             <!-- Telegram icon -->
-            >
             <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="m21 4-3 16-6-5-3 3v-5L4 11l17-7Z" />
                 <path d="m9 13 8-6-5 8" />

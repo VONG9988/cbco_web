@@ -1,3 +1,7 @@
+<script setup>
+import Icon from "@/components/Icon.vue";
+</script>
+
 <template>
     <section class="callout section" id="contact">
         <div>
@@ -12,7 +16,8 @@
             </p>
 
             <a class="primary-button light" href="mailto:info@cbco.org">
-                Start a conversation <span>↗</span>
+                Start a conversation
+                <Icon name="arrow-up-right" />
             </a>
 
             <div class="location-map">

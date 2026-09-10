@@ -1,10 +1,18 @@
+<script setup>
+import Icon from "@/components/Icon.vue";
+</script>
+
 <template>
     <section class="hero" id="home">
         <div class="hero-copy">
             <p class="eyebrow1">Cambodia · Community · Hope</p>
             <div class="hero-actions">
-                <a class="primary-button " href="#programs">Explore our work <span>↗</span></a>
-                <a class="quiet-link" href="#about">Our story <span>↓</span></a>
+                <a class="primary-button" href="#programs">Explore our work
+                    <Icon name="arrow-up-right" />
+                </a>
+                <a class="quiet-link" href="#about">Our story
+                    <Icon name="arrow-down" />
+                </a>
             </div>
         </div>
 

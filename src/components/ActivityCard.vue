@@ -1,4 +1,6 @@
 <script setup>
+import Icon from "@/components/Icon.vue";
+
 defineProps({
     item: {
         type: Object,
@@ -17,7 +19,8 @@ defineProps({
             <h3>{{ item.title }}</h3>
             <p>{{ item.text }}</p>
             <a :href="item.href || '#contact'" :aria-label="`Learn more about ${item.title}`">
-                Learn more <span>↗</span>
+                Learn more
+                <Icon name="arrow-up-right" />
             </a>
         </div>
     </article>
